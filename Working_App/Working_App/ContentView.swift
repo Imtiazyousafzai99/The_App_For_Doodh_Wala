@@ -6,28 +6,35 @@
 //
 
 import SwiftUI
-
+var x = true;
 struct ContentView: View {
+    
+    @State private var message = "Chi San"
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
-            Text("Hello, world!")
+        VStack(spacing: 20) {
+            
+            Text(message)
+                .font(.title)
+                .bold()
+            
+            Button("Tap Me") {
+                if (x)
+                {
+                    message = "Button was tapped!"
+                    x = false;
+                }
+                else
+                {
+                    message = "Tap me"
+                    x = true;
+                    
+                }
+            }
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(12)
         }
         .padding()
     }
