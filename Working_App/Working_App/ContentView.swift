@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @State var first_Img_1 = "swift"
-    @State var message = "Let Start Cal"
+    @State var message = "Doodh Wala App"
     @State var x = true;
 
 func handleKey(_ key: Int) {
     switch key {
     case 1:
-        message = "The \n Calculator \n Using SwiftUI"
+        message = "\n Doodh\n   Wala\n    App"
         break;
     case 2:
         message = "Give A Thumsup \nFrom M.I. Alam"
@@ -67,7 +67,7 @@ func handleKey(_ key: Int) {
             Button("Reset!!!") {
                 
                 handleKey(1)
-                first_Img_1 = "Let Start Cal"
+                first_Img_1 = "Let Start Doodh Wala App"
                 first_Img_1 = third_Img_3
                 x = false;
                 
